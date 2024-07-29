@@ -249,7 +249,7 @@ else:
 
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = [
-            AIMessage(content="Hello, I am a bot. How can I help you?"),
+            AIMessage(content="Hi [Student's Name], Need more help with the topic? Just let me know!"),
         ]
     if "vector_store" not in st.session_state:
         st.session_state.vector_store = get_vectorstore_from_PDF(pdf)
