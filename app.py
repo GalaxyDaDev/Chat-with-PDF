@@ -193,7 +193,7 @@ body {
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Chat with PDF 🗣️📑")
+st.title("Talk To Your Personalized Assitant! 🗣️📑")
 
 with st.sidebar:
     st.header("Upload here ⬇️")
@@ -204,11 +204,10 @@ if pdf is None:
 
     with left_column:
         st.markdown("""
-            #### 💡 **Why ChatPDF ?**
+            #### 💡 **Still Have Queries Use Me!**
             1. Targeted Information: Extracts precise, context-relevant details from uploaded PDFs.
             2. Quick Responses: Provides fast, accurate answers tailored to your documents.
             3. Easy to Use: Features an intuitive, user-friendly interface.
-            4. Ideal for Researchers: Perfect for students and researchers needing instant, detailed information.
             """)
         st.markdown("""
             #### 📚 **Features**
