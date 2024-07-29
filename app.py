@@ -234,8 +234,8 @@ if pdf is None:
         st.markdown("""
             #### 🤖 **Support:**
             For any assistance, you can contact me
-            1. Email: harshpandey2289@gmail.com   
-            2. Phone No: 8874328862
+            1. Email: himanshu.cosmicstudios@gmail.com  
+            2. Phone No: 9717165887
             """)
 
 else:
@@ -272,16 +272,3 @@ else:
         # Force a rerun to update the UI
         st.rerun()
 
-# Add a footer
-st.markdown("""
-<div style="position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom right, #ff00cc, #333399); padding: 10px; text-align: center;">
-    <p style="
-            margin: 0; 
-            font-size: 1em; 
-            color: #ffffff;
-            animation: heartbeat 1.5s infinite;">    
-            Developed by Harsh Pandey
-    </p>
-</div>
-<style>@keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }</style>
-""", unsafe_allow_html=True)
