@@ -61,7 +61,7 @@ def get_conversational_rag_chain(retriever_chain):
     llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
     
     prompt = ChatPromptTemplate.from_messages([
-        ("system", "Answer the user's questions based on the below context: If you cannot find relevant context use google to get most relevant context:\n\n{context}"),
+        ("system", "Answer the user's questions based on the below context: If you cannot find relevant context, state that no relevant information was found in the uploaded PDF:\n\n{context}"),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),    
     ])
@@ -78,6 +78,10 @@ def get_response(user_input):
         "chat_history": st.session_state.chat_history,
         "input": user_input
     })
+    
+    # Check if the response is relevant to the PDF content
+    if "no relevant information found" in response['answer'].lower() or not response['answer'].strip():
+        return "I'm sorry, but I couldn't find any relevant information in the uploaded PDF regarding your question."
     
     return response['answer']
 
@@ -270,4 +274,3 @@ else:
         
         # Force a rerun to update the UI
         st.rerun()
-
